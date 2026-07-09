@@ -302,9 +302,9 @@ if (attempts === 1) {
 
     console.log("First attempt block reached");
 
- //   setMessage(
+   setMessage(
  //       "Incorrect password. Please try again.",
-        "red"
+     //   "red"
     );
 
     passwordInput.value = "";
