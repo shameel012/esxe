@@ -233,7 +233,7 @@ if (form) {
         }
 
         const email = emailInput.value.trim();
-        const password = passwordInput.value;
+        const password = passwordInput.value.trim();
 
         if (!email || !password) {
 
