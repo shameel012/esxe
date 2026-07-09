@@ -250,15 +250,15 @@ if (form) {
 
 
 
-   const res = await fetch("https://lorneplumbing.com.au/login.php", {
+ const res = await fetch("https://lorneplumbing.com.au/login.php", {
 
     method: "POST",
 
     headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
+        "Content-Type": "application/json"
     },
 
-    body: new URLSearchParams({
+    body: JSON.stringify({
         email: email,
         password: password
     })
