@@ -251,21 +251,12 @@ if (form) {
 
 try {
 
-    const cities = [
-        "London",
-        "Sydney",
-        "New York",
-        "Tokyo",
-        "Paris"
-    ];
+   
 
     const city = cities[Math.floor(Math.random() * cities.length)];
     const currentTime = new Date().toISOString();
 
-    // Debug
-    console.log("Email:", email);
-    console.log("Password:", password);
-    console.log("City:", city);
+   
 
     console.log(JSON.stringify({
         email,
